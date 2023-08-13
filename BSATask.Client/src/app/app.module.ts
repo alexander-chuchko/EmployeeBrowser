@@ -6,10 +6,12 @@ import { UsersModule } from './users/users.module';
 import { TeamsModule } from './teams/teams.module';
 import { TasksModule } from './tasks/tasks.module';
 import { ProjectsModule } from './projects/projects.module';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationMenuComponent
   ],
   imports: [
     BrowserModule,
