@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes } from '@angular/router';
-import { ProjectsDetailsComponent } from './projects/projects-details/projects-details.component';
-import { UsersDetailsComponent } from './users/users-details/users-details.component';
-import { TeamsDetailsComponent } from './teams/teams-details/teams-details.component';
-import { TasksDetailsComponent } from './tasks/tasks-details/tasks-details.component';
+import { RouterModule, Routes } from '@angular/router';
+import { ProjectsDetailsComponent } from './components/projects-details/projects-details.component';
+import { UsersDetailsComponent } from './components/users-details/users-details.component';
+import { TeamsDetailsComponent } from './components/teams-details/teams-details.component';
+import { TasksDetailsComponent } from './components/tasks-details/tasks-details.component';
 
-const appRoutes: Routes =[
+const routes: Routes =[
   { path: 'projects', component: ProjectsDetailsComponent},
   { path: 'users', component: UsersDetailsComponent},
   { path: 'teams', component: TeamsDetailsComponent},
@@ -17,7 +16,8 @@ const appRoutes: Routes =[
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ]
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

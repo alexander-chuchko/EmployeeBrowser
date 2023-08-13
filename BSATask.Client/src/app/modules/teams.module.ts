@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TeamsDetailsComponent } from './teams-details/teams-details.component';
-
+import { TeamsDetailsComponent } from '../components/teams-details/teams-details.component';
 
 
 @NgModule({

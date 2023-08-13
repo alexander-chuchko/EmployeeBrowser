@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UsersDetailsComponent } from './users-details/users-details.component';
-
+import { UsersDetailsComponent } from '../components/users-details/users-details.component';
 
 
 @NgModule({

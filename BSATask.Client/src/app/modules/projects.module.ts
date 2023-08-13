@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TasksDetailsComponent } from './tasks-details/tasks-details.component';
+import { ProjectsDetailsComponent } from '../components/projects-details/projects-details.component';
 
 
 @NgModule({
   declarations: [
-    TasksDetailsComponent
+    ProjectsDetailsComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class TasksModule { }
+export class ProjectsModule { }
