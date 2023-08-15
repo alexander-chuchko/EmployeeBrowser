@@ -1,0 +1,103 @@
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="projectForm">
+        <h2>Create project</h2>
+        <div class="group">
+            <label>Name</label>
+            <br>
+            <input type="text" formControlName="name" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['name'].invalid && projectForm.controls['name'].touched">
+                Invalid name
+            </div>
+        </div>
+        <div class="group">
+            <label>User id</label>
+            <br>
+            <input type="text" formControlName="userId" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['userId'].invalid && projectForm.controls['userId'].touched">
+                Invalid user id
+            </div>
+        </div>
+        <div class="group">
+            <label>Team id</label>
+            <br>
+            <input type="text" formControlName="teamId" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['teamId'].invalid && projectForm.controls['teamId'].touched">
+                Invalid team id
+            </div>
+        </div>
+        <div class="group">
+            <label>Description</label>
+            <br>
+            <input type="text" formControlName="description" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['description'].invalid && projectForm.controls['description'].touched">
+                Invalid description
+            </div>
+        </div>
+        <div class="group">
+            <label>Created at</label>
+            <br>
+            <input type="text" formControlName="createdAt" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['createdAt'].invalid && projectForm.controls['createdAt'].touched">
+                Required
+            </div>
+        </div>
+        <div class="group">
+            <label>Deadline at</label>
+            <br>
+            <input type="text" formControlName="deadline" autocomplete="off" (focus)="isInputFocused = true"
+                (blur)="isInputFocused = false">
+                
+            <div class="alert alert-danger"
+                *ngIf="projectForm.controls['deadline'].invalid && projectForm.controls['deadline'].touched">
+                Required
+            </div>
+        </div>
+        <div>
+            <button type="submit" [disabled]="!projectForm.valid">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+    <!--
+    <div class="group">
+        <input type="text" formControlName ="name" autocomplete="off">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Name</label>
+        {{name.errors | json}}
+        <div class = "custom-error required-error" [ngClass]="projectForm.get('name')?.errors">
+            Name is required
+        </div>
+        <div class="custom-error minlenght-error" [ngClass]="projectForm.get('name')?.errors">
+            Name must be at least 4 characters long.
+        </div>
+    </div>
+
+    <div class="group">
+        <input type="text" formControlName ="description" autocomplete="off">
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Description</label>
+    </div>
+    <div>
+        <label for="createdAt">Created At:</label>
+        <input type="text" id="createdAt" formControlName="createdAt">
+    </div>
+    <div>
+        <label for="deadline">Deadline:</label>
+        <input type="text" id="deadline" formControlName="deadline">
+    </div>
+    <div>
+        <button type="submit">Add Project</button>
+    </div>-->

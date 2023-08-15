@@ -21,7 +21,7 @@
   #btnAdd {
     margin-right: 50px;
     top:50%;
-    background-color:#162feaeb;
+    background-color:#a3a3a9eb;
     color: #fff;
     border:none;
     border-radius:10px;
@@ -69,12 +69,11 @@
   color: #009879;
 }
 
-h1 {
+h2 {
   color:  #333;
-  font-size:large;
   margin-top: 25px;
   margin-left: 25px;
-  font-size: medium;
+  text-align: center;
 }
 
 

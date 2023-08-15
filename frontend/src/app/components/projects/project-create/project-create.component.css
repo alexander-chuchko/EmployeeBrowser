@@ -1,0 +1,65 @@
+/*custom-error required-error
+
+.group {
+    position: relative;
+    margin: 1.2em;
+}
+
+.bar {
+    position:relative;
+    display: block;
+    width: 320px;
+}
+
+input {
+    background: none;
+    color: aliceblue;
+    font-size: 18px;
+    padding: 10px, 10px, 10px, 5px;
+    width: 320px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(150, 190, 224);
+}
+
+input:focus {
+    outline: none;
+}*/
+
+.alert.alert-danger {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+input.ng-touched.ng-invalid {
+    border:solid red 2px;
+}
+
+input.ng-touched.ng-valid {
+    border:solid green 2px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .custom-error {
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .custom-error.active {
+    display: block;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+  

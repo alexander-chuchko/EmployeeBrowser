@@ -9,10 +9,11 @@ import { UsersModule } from './modules/users.module';
 import { TeamsModule } from './modules/teams.module';
 import { TasksModule } from './modules/tasks.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,9 @@ import { TasksModule } from './modules/tasks.module';
     ProjectsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

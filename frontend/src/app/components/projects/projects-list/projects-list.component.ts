@@ -1,18 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Project } from 'src/app/models/project/project';
 import { DataService } from 'src/app/services/dataservice.service';
 
 @Component({
-  selector: 'app-projects-details',
-  templateUrl: './projects-details.component.html',
-  styleUrls: ['./projects-details.component.css']
+  selector: 'app-projects-list',
+  templateUrl: './projects-list.component.html',
+  styleUrls: ['./projects-list.component.css']
 })
 
-export class ProjectsDetailsComponent implements OnInit {
+export class ProjectsListComponent implements OnInit {
   projects?: Project[];
   project?: Project;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, private router: Router) {
 
   }
 
@@ -31,7 +32,7 @@ export class ProjectsDetailsComponent implements OnInit {
   }
 
   addProject() {
-
+    this.router.navigate(['/projects/create']);
   }
 
   ngOnInit() {
