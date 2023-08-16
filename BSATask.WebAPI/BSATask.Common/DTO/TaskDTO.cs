@@ -1,4 +1,6 @@
-﻿namespace BSATask.Common.DTO
+﻿using Newtonsoft.Json;
+
+namespace BSATask.Common.DTO
 {
     public class TaskDTO : EntityBaseDTO
     {
@@ -10,6 +12,7 @@
 
         public string? Description { get; set; }
 
+        [JsonProperty("state")]
         public TaskStateDTO State { get; set; }
 
         public DateTime CreatedAt { get; set; }

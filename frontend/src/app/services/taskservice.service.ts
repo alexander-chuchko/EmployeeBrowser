@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
+import { Observable, catchError, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Task } from '../models/task/task';
-import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,28 +15,27 @@ export class TasksService {
   constructor(private http: HttpClient) {}
 
   getTasks() : Observable<Task[]> {
-    let concatUrl = `${this.baseUrl}${this.url}`;
-      return this.http.get<Task[]>(concatUrl)
-      .pipe(
+    let concatUrl = `${this.baseUrl}${this.url}`
+      return this.http.get<Task[]>(concatUrl).pipe(
         catchError(this.handleError)
       );
   }
+
    
   getTask(id: number): Observable<Task> {
-    return this.http.get<Task>(`${this.baseUrl}${this.url}/${id}`)
-      .pipe(
+    return this.http.get<Task>(`${this.baseUrl}${this.url}/${id}`).pipe(
         catchError(this.handleError)
       );
   }
-   
-  createTask(project: Task): Observable<any> {
-    return this.http.post(`${this.baseUrl}${this.url}`, project).pipe(
+
+  createTask(task: Task): Observable<any> {
+    return this.http.post(`${this.baseUrl}${this.url}`, task).pipe(
       catchError(this.handleError)
     );
   }
 
-  updateTask(project: Task): Observable<Task> {
-    return this.http.put<Task>(`${this.baseUrl}${this.url}/${project.id}`, project).pipe(
+  updateTask(task: Task): Observable<Task> {
+    return this.http.put<Task>(`${this.baseUrl}${this.url}/${task.id}`, task).pipe(
       catchError(this.handleError)
     );
   }

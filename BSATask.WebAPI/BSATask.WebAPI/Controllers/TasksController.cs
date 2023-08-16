@@ -89,7 +89,7 @@ namespace BSATask.WebAPI.Controllers
 
         //api/tasks/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTeam(int id, [FromBody] TaskDTO taskDTO)
+        public async Task<IActionResult> Update(int id, [FromBody] TaskDTO taskDTO)
         {
             var receivedTask = await _taskService.GetTaskByIdAsync(id);
 

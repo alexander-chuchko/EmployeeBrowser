@@ -30,6 +30,7 @@ export class ProjectCreateComponent<T> implements OnInit {
         deadline: moment(this.projectForm.value.deadline, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 
+      
       this.dataService.createProject(newProject).subscribe(
         (response: Project) => {
           console.log('Project saved successfully:', response);

@@ -13,27 +13,6 @@ export class DataService {
   private url = "/api/projects";
 
   constructor(private http: HttpClient) {}
-  /*
-  getAll(): Observable<T[]> {
-    return this.http.get<T[]>(this.baseUrl)
-      .pipe(
-        catchError(this.handleError)
-      );
-  }
-
-  create(entity: T): Observable<T> {
-    return this.http.post<T>(this.baseUrl, entity).pipe(
-      catchError(this.handleError)
-    );
-  }
-
-  update(entity: T, id: number): Observable<T> {
-    const url = `${this.baseUrl}${this.url}/${id}`;
-    return this.http.put<T>(url, entity).pipe(
-      catchError(this.handleError)
-    );
-  }*/
-
 
   getProjects() : Observable<Project[]> {
     let concatUrl = `${this.baseUrl}${this.url}`;

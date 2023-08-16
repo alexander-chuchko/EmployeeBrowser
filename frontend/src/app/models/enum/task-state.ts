@@ -1,6 +1,6 @@
 export enum TaskState {
-    ToDo,
-    InProgress,
-    Done,
-    Canceled
+    ToDo = 0,
+    InProgress = 1,
+    Done = 2,
+    Canceled =3
 }

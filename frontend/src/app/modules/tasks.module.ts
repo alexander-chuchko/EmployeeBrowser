@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -21,12 +22,14 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     HttpClientModule,
+    HttpClientModule,
     ReactiveFormsModule,
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
     MatButtonModule,
+    MatSelectModule,
   ]
 })
 export class TasksModule { }
