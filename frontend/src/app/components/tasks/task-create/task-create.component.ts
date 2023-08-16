@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as moment from 'moment';
@@ -11,18 +11,10 @@ import { TasksService } from 'src/app/services/taskservice.service';
   templateUrl: './task-create.component.html',
   styleUrls: ['./task-create.component.css']
 })
-export class TaskCreateComponent {
+export class TaskCreateComponent implements OnInit{
 
   taskForm!: FormGroup;
   @Input() task: Task = {} as Task;
-
-  states: any[] = [
-    { value: 0, viewValue: 'To Do' },
-    { value: 1, viewValue: 'In Progress' },
-    { value: 2, viewValue: 'Done' },
-    { value: 3, viewValue: 'Canceled' },
-  ];
-
 
   constructor(private taskService: TasksService, private router: Router) { }
 

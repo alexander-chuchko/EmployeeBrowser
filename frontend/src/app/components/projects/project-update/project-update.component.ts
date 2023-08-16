@@ -51,7 +51,6 @@ export class ProjectUpdateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     this.setUpValidation();
     this.route.params.subscribe(params => {
       const projectId = +params['id'];
@@ -60,7 +59,6 @@ export class ProjectUpdateComponent implements OnInit {
       });
     });
   }
-
 
   setUpValidation () {
     this.projectForm = new FormGroup({

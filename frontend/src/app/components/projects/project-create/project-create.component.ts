@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/dataservice.service';
   templateUrl: './project-create.component.html',
   styleUrls: ['./project-create.component.css'],
 })
-export class ProjectCreateComponent<T> implements OnInit {
+export class ProjectCreateComponent implements OnInit {
   @Input() project: Project = {} as Project;
   @Output() projectChange = new EventEmitter<Project>();
 
@@ -30,7 +30,7 @@ export class ProjectCreateComponent<T> implements OnInit {
         deadline: moment(this.projectForm.value.deadline, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 
-      
+
       this.dataService.createProject(newProject).subscribe(
         (response: Project) => {
           console.log('Project saved successfully:', response);
