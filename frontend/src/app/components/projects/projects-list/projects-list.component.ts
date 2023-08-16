@@ -27,7 +27,8 @@ export class ProjectsListComponent implements OnInit {
   updateProject(p: Project) {
     this.project = p;
     if(p) {
-      this.router.navigate(['/projects/update', p.id]
+      this.router.navigate(['/projects/update', p.id],
+
       );
     }
   }

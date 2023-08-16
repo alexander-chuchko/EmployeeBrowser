@@ -10,7 +10,7 @@ import { DataService } from 'src/app/services/dataservice.service';
   templateUrl: './project-create.component.html',
   styleUrls: ['./project-create.component.css'],
 })
-export class ProjectCreateComponent implements OnInit {
+export class ProjectCreateComponent<T> implements OnInit {
   @Input() project: Project = {} as Project;
   @Output() projectChange = new EventEmitter<Project>();
 
@@ -31,11 +31,11 @@ export class ProjectCreateComponent implements OnInit {
       };
 
       this.dataService.createProject(newProject).subscribe(
-        (response) => {
+        (response: Project) => {
           console.log('Project saved successfully:', response);
           this.router.navigate(['/projects']);
         },
-        (error) => {
+        (error: Project) => {
           console.error('Error saving project:', error);
         }
       );
