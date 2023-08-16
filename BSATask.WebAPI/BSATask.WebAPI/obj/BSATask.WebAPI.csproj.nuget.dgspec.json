@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj": {}
+    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj": {}
   },
   "projects": {
-    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj": {
+    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
+        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
         "projectName": "BSATask.Common",
-        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
+        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
         "packagesPath": "C:\\Users\\chuch\\.nuget\\packages\\",
-        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\obj\\",
+        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
-                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj"
+              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
+                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
+    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
+        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
         "projectName": "BSATask.DAL",
-        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
+        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
         "packagesPath": "C:\\Users\\chuch\\.nuget\\packages\\",
-        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\obj\\",
+        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -160,14 +160,14 @@
         }
       }
     },
-    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj": {
+    "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
+        "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
         "projectName": "BSATask.WebAPI",
-        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
+        "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
         "packagesPath": "C:\\Users\\chuch\\.nuget\\packages\\",
-        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\obj\\",
+        "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -189,11 +189,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj": {
-                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj"
+              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj": {
+                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj"
               },
-              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
-                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj"
+              "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj": {
+                "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj"
               }
             }
           }

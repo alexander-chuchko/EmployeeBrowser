@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LPbbvbvjRPNO+i73TVmRquZ4ZGWowPN396jgA1LzQL10UNPISJlgU9kAoTDPUeyFVPBdf7I2w07JuKuvmPKOlw==",
+  "dgSpecHash": "VsclhrkWFuIR+4HYhIa4GNEQqrrHTsPUwR+Gy88oljhCJkO/PYiFaWfh8EKkTPDxj8KMbXr79R62P73by2D5Gg==",
   "success": true,
-  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
+  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.WebAPI\\BSATask.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chuch\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\chuch\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

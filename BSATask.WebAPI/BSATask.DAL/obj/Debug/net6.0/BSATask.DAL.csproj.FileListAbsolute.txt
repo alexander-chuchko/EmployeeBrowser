@@ -38,3 +38,17 @@ E:\Library\AcademyBinary\AcademiBinary 2023\Projects\tasks-async-await\BSATask.W
 E:\Library\AcademyBinary\AcademiBinary 2023\Projects\tasks-async-await\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.pdb
 E:\Library\AcademyBinary\AcademiBinary 2023\Projects\tasks-async-await\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.genruntimeconfig.cache
 E:\Library\AcademyBinary\AcademiBinary 2023\Projects\tasks-async-await\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\ref\BSATask.DAL.dll
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\bin\Debug\net6.0\BSATask.DAL.deps.json
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\bin\Debug\net6.0\BSATask.DAL.runtimeconfig.json
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\bin\Debug\net6.0\BSATask.DAL.dll
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\bin\Debug\net6.0\BSATask.DAL.pdb
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.csproj.AssemblyReference.cache
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.AssemblyInfoInputs.cache
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.AssemblyInfo.cs
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.csproj.CoreCompileInputs.cache
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.dll
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\refint\BSATask.DAL.dll
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.pdb
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\BSATask.DAL.genruntimeconfig.cache
+E:\Library\AcademyBinary\AcademiBinary 2023\Projects\angular\BSATask.WebAPI\BSATask.DAL\obj\Debug\net6.0\ref\BSATask.DAL.dll

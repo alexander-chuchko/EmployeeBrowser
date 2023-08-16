@@ -3560,11 +3560,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
+      "projectUniqueName": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
       "projectName": "BSATask.DAL",
-      "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
+      "projectPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
       "packagesPath": "C:\\Users\\chuch\\.nuget\\packages\\",
-      "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\obj\\",
+      "outputPath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

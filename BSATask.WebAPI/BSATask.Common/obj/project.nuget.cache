@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FR+A+nZIpD7rKm0xlr6B7fsbcUwBAr6wDd0PiLdrTqD2kSdtdCx+tFq2uEXURM29RbTyOofO81BWAF2BdTH6Vw==",
+  "dgSpecHash": "lx4ZdI+R4R1D7PNyBaIjLAHJSDCc+hqTnMXNOTNhf0DFRNuLyQmYx0Zbt5azr0wQ4kEZ0BzLvZC9fzjbBpWm0g==",
   "success": true,
-  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
+  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.Common\\BSATask.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chuch\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\chuch\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

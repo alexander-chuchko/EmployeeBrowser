@@ -91,7 +91,7 @@ namespace BSATask.WebAPI.Controllers
 
         //api/projects/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTeam(int id, [FromBody] ProjectDTO projectDTO)
+        public async Task<IActionResult> Update(int id, [FromBody] ProjectDTO projectDTO)
         {
             var receivedProject = await _projectService.GetProjectByIdAsync(id);
 

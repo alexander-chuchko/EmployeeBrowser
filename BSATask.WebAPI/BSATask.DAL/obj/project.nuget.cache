@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B8Cn0NAynJXpjgZIO/C7zicn7MdH/aTVAM/dgiqxrSabpFqA1dDbPl49klaWcWQyHEfIhrVfROBqoV9Qbt1WMA==",
+  "dgSpecHash": "tbWp+N/wyTxWabk6Vi+wYZT8DLzzbd3DczRRUHCKU6rpBhpnAO75WoiQX7wC7HDClzr9RxbagBOSrVAv1efPUw==",
   "success": true,
-  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\tasks-async-await\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
+  "projectFilePath": "E:\\Library\\AcademyBinary\\AcademiBinary 2023\\Projects\\angular\\BSATask.WebAPI\\BSATask.DAL\\BSATask.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chuch\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\chuch\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

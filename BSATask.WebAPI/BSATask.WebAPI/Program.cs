@@ -37,8 +37,16 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+app.UseCors(options =>
+{
+    options.WithOrigins("http://localhost:4200") // Add your Angular client URL here
+           .AllowAnyHeader()
+           .AllowAnyMethod();
+});
+
 app.MapControllers();
 
 app.Run();
 
 public partial class Program { }
+
