@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UsersDetailsComponent } from '../components/users-details/users-details.component';
+import { UsersListComponent } from '../components/users/users-list/users-list.component';
+import { UsersCreateComponent } from '../components/users/users-create/users-create.component';
+import { UsersUpdateComponent } from '../components/users/users-update/users-update.component';
 
 
 @NgModule({
   declarations: [
-    UsersDetailsComponent
+    UsersListComponent,
+    UsersCreateComponent,
+    UsersUpdateComponent
+
   ],
   imports: [
     CommonModule
