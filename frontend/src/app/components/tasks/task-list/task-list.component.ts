@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Task } from 'src/app/models/task/task';
-import { DataService } from 'src/app/services/dataservice.service';
+import { TasksService } from 'src/app/services/taskservice.service';
 
 @Component({
   selector: 'app-task-list',
@@ -12,37 +12,37 @@ export class TaskListComponent {
   tasks?: Task[];
   task?: Task;
 
-  constructor(private dataService: DataService, private router: Router) {
+  constructor(private taskService: TasksService, private router: Router) {
 
   }
 
-  loadPojects() {
-   // this.dataService..subscribe(data => {
-      //this.tasks = data;
-    //});
+  loadTasks() {
+    this.taskService.getTasks().subscribe(data => {
+      this.tasks = data;
+    });
   }
 
-  updateProject(t: Task) {
+  updateTask(t: Task) {
     this.task = t;
     if(t) {
-      this.router.navigate(['/projects/update', t.id]
+      this.router.navigate(['/tasks/update', t.id]
       );
     }
   }
 
-  deleteProject(t: Task) {
+  deleteTask(t: Task) {
     if (t && t.id) {
-      this.dataService.deleteProject(t.id).subscribe(() => {
-        this.loadPojects();
+      this.taskService.deleteTask(t.id).subscribe(() => {
+        this.loadTasks();
       });
     }
   }
 
-  addProject() {
-    this.router.navigate(['/projects/create']);
+  addTask() {
+    this.router.navigate(['/tasks/create']);
   }
 
   ngOnInit() {
-    this.loadPojects();
+    this.loadTasks();
   }
 }

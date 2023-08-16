@@ -3,11 +3,20 @@
     <table class="styled-table">
         <thead>
             <tr>
+                <!--    
+    projectId?: number;
+    userId?: number;
+    name: string;
+    description?: string;
+    state: TaskState;
+    createdAt: string;
+    finishedAt?: string;-->
                 <td class="cell">Id</td>
                 <td class="cell">Project Id</td>
                 <td class="cell">User Id</td>
                 <td class="cell">Name</td>
                 <td class="cell description-cell">Description</td>
+                <td class="cell">State</td>
                 <td class="cell">Created At</td>
                 <td class="cell">Finished At</td>
                 <td>Actions</td>
@@ -18,18 +27,19 @@
                 <td class="cell">{{t.id}}</td>
                 <td class="cell">{{t?.projectId}}</td>
                 <td class="cell">{{t?.userId}}</td>
-                <td class="cell">{{t?.description}}</td>
-                <td>{{t?.state}}</td>
+                <td class="cell">{{t?.name}}</td>
+                <td>{{t?.description}}</td>
+                <td class="cell">{{t?.state}}</td>
                 <td class="cell">{{t.createdAt}}</td>
                 <td class="cell">{{t?.finishedAt}}</td>
                 <td class="cell">
-                    <button id="btnUpdate" (click)="updateProject(t)">Update</button>
-                    <button id="btnRemove" (click)="deleteProject(t)">Remove</button>
+                    <button id="btnUpdate" (click)="updateTask(t)">Update</button>
+                    <button id="btnRemove" (click)="deleteTask(t)">Remove</button>
                 </td>
             </tr>
         </tbody>
     </table>
     <div id="containerButton">
-        <button id="btnAdd" (click)="addProject()">Add project</button>
+        <button id="btnAdd" (click)="addTask()">Add task</button>
     </div>
 </div>
