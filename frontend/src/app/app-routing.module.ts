@@ -5,10 +5,12 @@ import { UsersDetailsComponent } from './components/users-details/users-details.
 import { TeamsDetailsComponent } from './components/teams-details/teams-details.component';
 import { TasksDetailsComponent } from './components/tasks-details/tasks-details.component';
 import { ProjectCreateComponent } from './components/projects/project-create/project-create.component';
+import { ProjectUpdateComponent } from './components/projects/project-update/project-update.component';
 
 const routes: Routes =[
   { path: 'projects', component: ProjectsListComponent},
   { path: 'projects/create', component: ProjectCreateComponent},
+  { path: 'projects/update/:id', component: ProjectUpdateComponent},
   { path: 'users', component: UsersDetailsComponent},
   { path: 'teams', component: TeamsDetailsComponent},
   { path: 'tasks', component: TasksDetailsComponent},

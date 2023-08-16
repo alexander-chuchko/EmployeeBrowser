@@ -1,36 +1,44 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { Project } from 'src/app/models/project/project';
 import { DataService } from 'src/app/services/dataservice.service';
 
 @Component({
-  selector: 'app-project-create',
-  templateUrl: './project-create.component.html',
-  styleUrls: ['./project-create.component.css'],
+  selector: 'app-project-update',
+  templateUrl: './project-update.component.html',
+  styleUrls: ['./project-update.component.css']
 })
-export class ProjectCreateComponent implements OnInit {
+
+export class ProjectUpdateComponent implements OnInit {
   @Input() project: Project = {} as Project;
   @Output() projectChange = new EventEmitter<Project>();
 
   projectForm!: FormGroup;
+  id!: number;
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
-  onSubmit() {  
+
+  onSubmit() {
     if (this.projectForm.valid) {
-      const newProject: Project = {
+      let newProject: Project = {
         id: 0,
         name: this.projectForm.value.name,
         userId: this.projectForm.value.userId,
         teamId: this.projectForm.value.teamId,
         description: this.projectForm.value.description,
-        createdAt: moment(this.projectForm.value.createdAt, 'MM/DD/YYYY').format('YYYY-MM-DD'),
-        deadline: moment(this.projectForm.value.deadline, 'MM/DD/YYYY').format('YYYY-MM-DD'),
+        createdAt: this.projectForm.value.createdAt,
+        deadline: this.projectForm.value.deadline
       };
 
-      this.dataService.createProject(newProject).subscribe(
+      const getId = this.route.snapshot.paramMap.get('id');
+      if(getId) {
+          newProject.id = parseInt(getId);
+      }
+
+      this.dataService.updateProject(newProject).subscribe(
         (response) => {
           console.log('Project saved successfully:', response);
           this.router.navigate(['/projects']);
@@ -43,6 +51,18 @@ export class ProjectCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.setUpValidation();
+    this.route.params.subscribe(params => {
+      const projectId = +params['id'];
+      this.dataService.getProject(projectId).subscribe(project => {
+        this.initializingFieldsWithValues(project);
+      });
+    });
+  }
+
+
+  setUpValidation () {
     this.projectForm = new FormGroup({
       'name': new FormControl(this.project.name, [
         Validators.required,
@@ -71,6 +91,19 @@ export class ProjectCreateComponent implements OnInit {
     });
   }
 
+  initializingFieldsWithValues(p: Project) {
+    if (p) {
+      this.projectForm.patchValue({
+        'name': p?.name,
+        'userId': p?.userId,
+        'teamId': p?.teamId,
+        'description': p?.description,
+        'createdAt':moment(p.createdAt).format('YYYY-MM-DD'),
+        'deadline': moment(p.deadline).format('YYYY-MM-DD'),
+      });
+    }
+  }
+
   validateId(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
     if (isNaN(value)) {
@@ -80,13 +113,11 @@ export class ProjectCreateComponent implements OnInit {
     return null;
   }
 
+
   dateVaidator(control: AbstractControl) {
-    if (control && control.value && !moment(control.value, 'MM/DD/YYYY', true).isValid()) {
+    if (control && control.value && !(moment(control.value, 'MM/DD/YYYY', true).isValid() || moment(control.value, 'YYYY-MM-DD', true).isValid())) {
       return { 'dateVaidator': true };
     }
     return null;
   }
 }
-
-
-

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from 'src/app/models/project/project';
 import { DataService } from 'src/app/services/dataservice.service';
@@ -12,6 +12,7 @@ import { DataService } from 'src/app/services/dataservice.service';
 export class ProjectsListComponent implements OnInit {
   projects?: Project[];
   project?: Project;
+  @Output() idEmmiter?: number;
 
   constructor(private dataService: DataService, private router: Router) {
 
@@ -23,12 +24,20 @@ export class ProjectsListComponent implements OnInit {
     });
   }
 
-  editProject(p: Project) {
+  updateProject(p: Project) {
     this.project = p;
+    if(p) {
+      this.router.navigate(['/projects/update', p.id]
+      );
+    }
   }
 
-  delete(p: Project) {
-
+  deleteProject(p: Project) {
+    if (p && p.id) {
+      this.dataService.deleteProject(p.id).subscribe(() => {
+        this.loadPojects();
+      });
+    }
   }
 
   addProject() {

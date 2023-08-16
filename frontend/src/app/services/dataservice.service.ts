@@ -24,29 +24,36 @@ export class DataService {
       );
   }
    
-  getProject(id: number) {
-      return this.http.get(this.baseUrl + this.url + '/' + id);
+  getProject(id: number): Observable<Project> {
+    return this.http.get<Project>(`${this.baseUrl}${this.url}/${id}`)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
    
-  createProject(project: Project) {
-      return this.http.post(this.baseUrl + this.url, project);
+  createProject(project: Project): Observable<any> {
+    return this.http.post(`${this.baseUrl}${this.url}`, project).pipe(
+      catchError(this.handleError)
+    );
   }
 
-  updateProject(project: Project) {
-
-      return this.http.put(this.baseUrl + this.url, project);
+  updateProject(project: Project): Observable<Project> {
+    return this.http.put<Project>(`${this.baseUrl}${this.url}/${project.id}`, project).pipe(
+      catchError(this.handleError)
+    );
   }
+  
 
-  deleteProject(id: number) {
-      return this.http.delete(this.baseUrl + this.url + '/' + id);
+  deleteProject(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.baseUrl}${this.url}/${id}`).pipe(
+      catchError(this.handleError)
+    );
   }
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
-      // Client-side error
       console.error('An error occurred:', error.error.message);
     } else {
-      // Backend returned an unsuccessful response code
       console.error(
         `Backend returned code ${error.status}, ` +
         `body was: ${error.error}`);

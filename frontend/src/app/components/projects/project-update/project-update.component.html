@@ -1,4 +1,4 @@
-<h2>Create project</h2>
+<h2>Update project</h2>
 <div class="form-container">
     <form class="created-project-form" (ngSubmit)="onSubmit()" [formGroup]="projectForm">
         <div class="group">
@@ -39,7 +39,7 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Choose a date</mat-label>
                     <input matInput [matDatepicker]="pickerCreated" name="createdAt" formControlName="createdAt">
-                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="pickerCreated"></mat-datepicker-toggle>
                     <mat-datepicker #pickerCreated></mat-datepicker>
                 </mat-form-field>
@@ -50,7 +50,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>Choose a date</mat-label>
                 <input matInput [matDatepicker]="pickerDedline" name="deadlineAt" formControlName="deadline">
-                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matSuffix [for]="pickerDedline"></mat-datepicker-toggle>
                 <mat-datepicker #pickerDedline></mat-datepicker>
             </mat-form-field>

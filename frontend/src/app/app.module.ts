@@ -8,6 +8,8 @@ import { ProjectsModule } from './modules/projects.module';
 import { UsersModule } from './modules/users.module';
 import { TeamsModule } from './modules/teams.module';
 import { TasksModule } from './modules/tasks.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectUpdateComponent } from './components/projects/project-update/project-update.component';
 
 
 @NgModule({
@@ -22,10 +24,12 @@ import { TasksModule } from './modules/tasks.module';
     TasksModule,
     ProjectsModule,
     AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
