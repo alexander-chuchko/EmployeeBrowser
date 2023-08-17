@@ -28,7 +28,7 @@ export class TeamsListComponent implements OnInit {
       }
     }
   
-    deleteProject(t: Team) {
+    deleteTeam(t: Team) {
       if (t && t.id) {
         this.teamService.deleteTeam(t.id).subscribe(() => {
           this.loadTeams();
@@ -36,7 +36,7 @@ export class TeamsListComponent implements OnInit {
       }
     }
   
-    addProject() {
+    addTeam() {
       this.router.navigate(['/teams/create']);
     }
 

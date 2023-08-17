@@ -1,1 +1,27 @@
-<p>teams-list works!</p>
+<div class="container">
+    <h2>List teams</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <td class="cell">Id</td>
+                <td class="cell">Name</td>
+                <td class="cell">Created At</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of teams">
+                <td class="cell">{{t.id}}</td>
+                <td class="cell">{{t?.name}}</td>
+                <td class="cell">{{t.createdAt}}</td>
+                <td class="cell">
+                    <button id="btnUpdate" (click)="updateTeam(t)">Update</button>
+                    <button id="btnRemove" (click)="deleteTeam(t)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="containerButton">
+        <button id="btnAdd" (click)="addTeam()">Add team</button>
+    </div>
+</div>
