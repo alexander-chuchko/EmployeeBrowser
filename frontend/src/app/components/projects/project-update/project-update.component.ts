@@ -14,7 +14,6 @@ import { DataService } from 'src/app/services/dataservice.service';
 
 export class ProjectUpdateComponent implements OnInit {
   @Input() project: Project = {} as Project;
-  @Output() projectChange = new EventEmitter<Project>();
 
   projectForm!: FormGroup;
   id!: number;
@@ -23,7 +22,7 @@ export class ProjectUpdateComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
   canDeactivate(): Observable<boolean> {
-    if (this.projectForm.dirty) {
+    if (this.projectForm.dirty && !this.isSaved) {
       const result = window.confirm('There are unsaved changes! Are you sure?');
       return of(result);
     }
@@ -31,6 +30,7 @@ export class ProjectUpdateComponent implements OnInit {
   }
 
   onSubmit() {
+    this.isSaved = true;
     if (this.projectForm.valid) {
       let newProject: Project = {
         id: 0,

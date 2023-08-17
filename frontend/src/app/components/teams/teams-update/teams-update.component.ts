@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
+import { Observable, of } from 'rxjs';
 import { Team } from 'src/app/models/team/team';
 import { TeamService } from 'src/app/services/team.service';
 
@@ -15,11 +16,21 @@ export class TeamsUpdateComponent {
 
   teamForm!: FormGroup;
   id!: number;
+  isSaved = false;
 
   constructor(private teamService: TeamService, private router: Router, private route: ActivatedRoute) { }
-
+  
+  canDeactivate(): Observable<boolean> {
+    if (this.teamForm.dirty && !this.isSaved) {
+      const result = window.confirm('There are unsaved changes! Are you sure?');
+      return of(result);
+    }
+    return of(true);
+  }
 
   onSubmit() {
+    this.isSaved = true;
+    
     if (this.teamForm.valid) {
       let newTeam: Team = {
         id: 0,

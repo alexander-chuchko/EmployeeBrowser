@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
+import { Observable, of } from 'rxjs';
 import { TaskState } from 'src/app/models/enum/task-state';
 import { Task } from 'src/app/models/task/task';
 import { TasksService } from 'src/app/services/taskservice.service';
@@ -15,10 +16,20 @@ export class TaskUpdateComponent {
 
   taskForm!: FormGroup;
   @Input() task: Task = {} as Task;
+  isSaved = false;
 
   constructor(private taskService: TasksService, private router: Router, private route: ActivatedRoute) { }
 
+  canDeactivate(): Observable<boolean> {
+    if (this.taskForm.dirty && !this.isSaved) {
+      const result = window.confirm('There are unsaved changes! Are you sure?');
+      return of(result);
+    }
+    return of(true);
+  }
+  
   onSubmit() {  
+    this.isSaved = true;
     if (this.taskForm.valid) {
       let newTask: Task = {
         id:0,

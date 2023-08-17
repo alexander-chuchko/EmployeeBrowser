@@ -20,13 +20,13 @@ const routes: Routes =[
   { path: 'projects/update/:id', component: ProjectUpdateComponent, canDeactivate: [CanDeactivateGuard]},
   { path: 'tasks', component: TaskListComponent},
   { path: 'tasks/create', component: TaskCreateComponent},
-  { path: 'tasks/update/:id', component: TaskUpdateComponent},
+  { path: 'tasks/update/:id', component: TaskUpdateComponent, canDeactivate: [CanDeactivateGuard]},
   { path: 'teams', component: TeamsListComponent},
   { path: 'teams/create', component: TeamsCreateComponent},
-  { path: 'teams/update/:id', component: TeamsUpdateComponent},
+  { path: 'teams/update/:id', component: TeamsUpdateComponent, canDeactivate: [CanDeactivateGuard]},
   { path: 'users', component: UsersListComponent},
   { path: 'users/create', component: UsersCreateComponent},
-  { path: 'users/update/:id', component: UsersUpdateComponent},
+  { path: 'users/update/:id', component: UsersUpdateComponent, canDeactivate: [CanDeactivateGuard]},
   { path: '**', redirectTo: 'projects' }
 ];
 

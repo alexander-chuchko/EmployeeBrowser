@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
+import { Observable, of } from 'rxjs';
 import { User } from 'src/app/models/user/user';
 import { UserService } from 'src/app/services/userservice.service';
 
@@ -15,11 +16,20 @@ export class UsersUpdateComponent implements OnInit {
 
   userForm!: FormGroup;
   id!: number;
+  isSaved = false;
 
   constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) { }
 
+  canDeactivate(): Observable<boolean> {
+    if (this.userForm.dirty && !this.isSaved) {
+      const result = window.confirm('There are unsaved changes! Are you sure?');
+      return of(result);
+    }
+    return of(true);
+  }
 
   onSubmit() {
+    this.isSaved = true;
     if (this.userForm.valid) {
       let newUser: User = {
         id: 0,
@@ -27,13 +37,13 @@ export class UsersUpdateComponent implements OnInit {
         firstName: this.userForm.value.firstName,
         lastName: this.userForm.value.lastName,
         email: this.userForm.value.email,
-        registeredAt: moment(this.userForm.value.registeredAt, 'MM/DD/YYYY').format('YYYY-MM-DD'), 
+        registeredAt: moment(this.userForm.value.registeredAt, 'MM/DD/YYYY').format('YYYY-MM-DD'),
         birthDay: moment(this.userForm.value.birthDay, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 
       const getId = this.route.snapshot.paramMap.get('id');
-      if(getId) {
-          newUser.id = parseInt(getId);
+      if (getId) {
+        newUser.id = parseInt(getId);
       }
 
       this.userService.updateUser(newUser).subscribe(
@@ -58,7 +68,7 @@ export class UsersUpdateComponent implements OnInit {
     });
   }
 
-  setUpValidation () {
+  setUpValidation() {
     this.userForm = new FormGroup({
       'teamId': new FormControl(this.user.teamId, [
         Validators.required,
@@ -71,7 +81,7 @@ export class UsersUpdateComponent implements OnInit {
       'lastName': new FormControl(this.user.teamId, [
         Validators.required,
         Validators.minLength(3)
-        
+
       ]),
       'email': new FormControl(this.user.email, [
         Validators.required,
@@ -95,7 +105,7 @@ export class UsersUpdateComponent implements OnInit {
         'firstName': u?.firstName,
         'lastName': u?.lastName,
         'email': u?.email,
-        'registeredAt':moment(u.registeredAt).format('YYYY-MM-DD'),
+        'registeredAt': moment(u.registeredAt).format('YYYY-MM-DD'),
         'birthDay': moment(u.birthDay).format('YYYY-MM-DD'),
       });
     }
@@ -116,5 +126,4 @@ export class UsersUpdateComponent implements OnInit {
     }
     return null;
   }
-
 }

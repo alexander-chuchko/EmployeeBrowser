@@ -11,6 +11,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
+import { TaskDirective } from '../directives/taskdirective';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import {MatSelectModule} from '@angular/material/select';
     TaskListComponent,
     TaskCreateComponent,
     TaskUpdateComponent,
+    TaskDirective 
   ],
   imports: [
     CommonModule,
