@@ -1,1 +1,35 @@
-<p>users-list works!</p>
+<div class="container">
+    <h2>List users</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <td class="cell">Id</td>
+                <td class="cell">Team Id</td>
+                <td class="cell">Firstname</td>
+                <td class="cell">Lastname</td>
+                <td class="cell">Email</td>
+                <td class="cell">Registered At</td>
+                <td class="cell">Birthday</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let u of users">
+                <td class="cell">{{u.id}}</td>
+                <td class="cell">{{u?.teamId}}</td>
+                <td class="cell">{{u?.firstName}}</td>
+                <td class="cell">{{u?.lastName}}</td>
+                <td class="cell">{{u?.email}}</td>
+                <td class="cell">{{u.registeredAt}}</td>
+                <td class="cell">{{u.birthDay}}</td>
+                <td class="cell">
+                    <button id="btnUpdate" (click)="updateUser(u)">Update</button>
+                    <button id="btnRemove" (click)="deleteUser(u)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="containerButton">
+        <button id="btnAdd" (click)="addUser()">Add project</button>
+    </div>
+</div>

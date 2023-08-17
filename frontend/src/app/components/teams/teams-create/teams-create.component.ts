@@ -31,14 +31,14 @@ export class TeamsCreateComponent implements OnInit {
 
   onSubmit() {  
     if (this.teamForm.valid) {
-      const newProject: Team = {
+      const newTeam: Team = {
         id: 0,
         name: this.teamForm.value.name,
         createdAt: moment(this.teamForm.value.createdAt, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 
 
-      this.teamService.createTeam(newProject).subscribe(
+      this.teamService.createTeam(newTeam).subscribe(
         (response: Team) => {
           console.log('Team saved successfully:', response);
           this.router.navigate(['/teams']);

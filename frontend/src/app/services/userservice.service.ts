@@ -14,7 +14,7 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getTasks() : Observable<User[]> {
+  getUsers() : Observable<User[]> {
     let concatUrl = `${this.baseUrl}${this.url}`
       return this.http.get<User[]>(concatUrl).pipe(
         catchError(this.handleError)
@@ -22,25 +22,25 @@ export class UserService {
   }
 
    
-  getTask(id: number): Observable<User> {
+  getUser(id: number): Observable<User> {
     return this.http.get<User>(`${this.baseUrl}${this.url}/${id}`).pipe(
         catchError(this.handleError)
       );
   }
 
-  createTask(user: User): Observable<any> {
+  createUser(user: User): Observable<any> {
     return this.http.post(`${this.baseUrl}${this.url}`, user).pipe(
       catchError(this.handleError)
     );
   }
 
-  updateTask(user: User): Observable<User> {
+  updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.baseUrl}${this.url}/${user.id}`, user).pipe(
       catchError(this.handleError)
     );
   }
 
-  deleteTask(id: number): Observable<void> {
+  deleteUser(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}${this.url}/${id}`).pipe(
       catchError(this.handleError)
     );

@@ -2,7 +2,7 @@ import { EntityBase } from "../entitybase";
 
 export interface User extends EntityBase{
     teamId?: number;
-    FirstName?: string;
+    firstName?: string;
     lastName?: string;
     email?: string;
     registeredAt: string;
