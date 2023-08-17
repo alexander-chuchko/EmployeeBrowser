@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
+import { Observable, of } from 'rxjs';
 import { Project } from 'src/app/models/project/project';
 import { DataService } from 'src/app/services/dataservice.service';
 
@@ -17,9 +18,17 @@ export class ProjectUpdateComponent implements OnInit {
 
   projectForm!: FormGroup;
   id!: number;
+  isSaved = false;
 
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
 
+  canDeactivate(): Observable<boolean> {
+    if (this.projectForm.dirty) {
+      const result = window.confirm('There are unsaved changes! Are you sure?');
+      return of(result);
+    }
+    return of(true);
+  }
 
   onSubmit() {
     if (this.projectForm.valid) {
@@ -107,10 +116,8 @@ export class ProjectUpdateComponent implements OnInit {
     if (isNaN(value)) {
       return { invalidUserId: true };
     }
-
     return null;
   }
-
 
   dateVaidator(control: AbstractControl) {
     if (control && control.value && !(moment(control.value, 'MM/DD/YYYY', true).isValid() || moment(control.value, 'YYYY-MM-DD', true).isValid())) {

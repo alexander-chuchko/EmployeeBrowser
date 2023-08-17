@@ -27,7 +27,7 @@ import { ProjectUpdateComponent } from '../components/projects/project-update/pr
     MatInputModule,
     MatNativeDateModule,
     MatButtonModule,
-  ]
+  ],
 })
 
 export class ProjectsModule { }

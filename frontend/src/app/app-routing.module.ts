@@ -12,11 +12,12 @@ import { TeamsListComponent } from './components/teams/teams-list/teams-list.com
 import { TeamsUpdateComponent } from './components/teams/teams-update/teams-update.component';
 import { UsersCreateComponent } from './components/users/users-create/users-create.component';
 import { UsersUpdateComponent } from './components/users/users-update/users-update.component';
+import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 
 const routes: Routes =[
   { path: 'projects', component: ProjectsListComponent},
   { path: 'projects/create', component: ProjectCreateComponent},
-  { path: 'projects/update/:id', component: ProjectUpdateComponent},
+  { path: 'projects/update/:id', component: ProjectUpdateComponent, canDeactivate: [CanDeactivateGuard]},
   { path: 'tasks', component: TaskListComponent},
   { path: 'tasks/create', component: TaskCreateComponent},
   { path: 'tasks/update/:id', component: TaskUpdateComponent},
@@ -25,14 +26,14 @@ const routes: Routes =[
   { path: 'teams/update/:id', component: TeamsUpdateComponent},
   { path: 'users', component: UsersListComponent},
   { path: 'users/create', component: UsersCreateComponent},
-  { path: 'usersupdate/:id', component: UsersUpdateComponent},
+  { path: 'users/update/:id', component: UsersUpdateComponent},
   { path: '**', redirectTo: 'projects' }
 ];
 
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   exports: [RouterModule]
 })

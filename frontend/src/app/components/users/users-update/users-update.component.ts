@@ -27,7 +27,7 @@ export class UsersUpdateComponent implements OnInit {
         firstName: this.userForm.value.firstName,
         lastName: this.userForm.value.lastName,
         email: this.userForm.value.email,
-        registeredAt: moment(this.userForm.value.registeredAt, 'MM/DD/YYYY').format('YYYY-MM-DD'),
+        registeredAt: moment(this.userForm.value.registeredAt, 'MM/DD/YYYY').format('YYYY-MM-DD'), 
         birthDay: moment(this.userForm.value.birthDay, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 

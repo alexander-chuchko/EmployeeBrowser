@@ -24,12 +24,12 @@ export class TeamsUpdateComponent {
       let newTeam: Team = {
         id: 0,
         name: this.teamForm.value.name,
-        createdAt: this.teamForm.value.createdAt,
+        createdAt: moment(this.teamForm.value.createdAt, 'MM/DD/YYYY').format('YYYY-MM-DD'),
       };
 
       const getId = this.route.snapshot.paramMap.get('id');
-      if(getId) {
-          newTeam.id = parseInt(getId);
+      if (getId) {
+        newTeam.id = parseInt(getId);
       }
 
       this.teamService.updateTeam(newTeam).subscribe(
@@ -54,7 +54,7 @@ export class TeamsUpdateComponent {
     });
   }
 
-  setUpValidation () {
+  setUpValidation() {
     this.teamForm = new FormGroup({
       'name': new FormControl(this.team.name, [
         Validators.required,
@@ -71,7 +71,7 @@ export class TeamsUpdateComponent {
     if (t) {
       this.teamForm.patchValue({
         'name': t?.name,
-        'createdAt':moment(t.createdAt).format('YYYY-MM-DD'),
+        'createdAt': moment(t.createdAt).format('YYYY-MM-DD'),
       });
     }
   }
