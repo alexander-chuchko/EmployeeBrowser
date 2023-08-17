@@ -8,7 +8,7 @@ import { User } from '../models/user/user';
 @Injectable({
   providedIn: 'root'
 })
-export class UserserviceService {
+export class UserService {
 
   private baseUrl: string = environment.apiUrl;
   private url = "/api/users";
