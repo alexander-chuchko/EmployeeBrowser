@@ -1,0 +1,62 @@
+<h2>Create project</h2>
+<div class="form-container">
+    <form class="created-project-form" (ngSubmit)="onSubmit()" [formGroup]="projectForm">
+        <div class="group">
+            <label>Name</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" placeholder="name" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>User id</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>User Id</mat-label>
+                <input matInput name="userId" placeholder="userId" formControlName="userId">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Team id</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Team Id</mat-label>
+                <input matInput name="teamId" placeholder="teamId" formControlName="teamId">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Description</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input matInput name="description" placeholder="Description" formControlName="description">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Created at</label>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="pickerCreated" name="createdAt" formControlName="createdAt">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="pickerCreated"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerCreated></mat-datepicker>
+                </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Deadline at</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="pickerDedline" name="deadlineAt" formControlName="deadline">
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="pickerDedline"></mat-datepicker-toggle>
+                <mat-datepicker #pickerDedline></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <button type="submit" [disabled]="!projectForm.valid" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>

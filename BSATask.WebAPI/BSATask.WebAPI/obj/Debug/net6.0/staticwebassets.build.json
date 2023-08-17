@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mxeejhTsskA03FopFDQe+ZsZVF5IkNRxx4xWD0W08C0=",
+  "Source": "BSATask.WebAPI",
+  "BasePath": "_content/BSATask.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

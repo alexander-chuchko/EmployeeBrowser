@@ -1,0 +1,76 @@
+<h2>Update task</h2>
+<div class="form-container">
+    <form class="created-project-form" (ngSubmit)="onSubmit()" [formGroup]="taskForm">
+        <div class="group">
+            <label>Name</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" placeholder="name" formControlName="name">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Project id</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Project Id</mat-label>
+                <input matInput name="projectId" placeholder="projectId" formControlName="projectId">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>User id</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>User Id</mat-label>
+                <input matInput name="userId" placeholder="userId" formControlName="userId">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Description</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Description</mat-label>
+                <input matInput name="description" placeholder="description" formControlName="description">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <mat-form-field>
+                <mat-label>Select a state</mat-label>
+                <mat-select formControlName="state" disableRipple>
+                  <mat-option value="0">To Do</mat-option>
+                  <mat-option value="1">In Progress</mat-option>
+                  <mat-option value="2">Done</mat-option>
+                  <mat-option value="3">Canceled</mat-option>
+                </mat-select>
+                <mat-icon matSuffix>select state</mat-icon>
+              </mat-form-field>
+        </div>
+        
+        <div class="group">
+            <label>Created at</label>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="pickerCreated" name="createdAt" formControlName="createdAt">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="pickerCreated"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerCreated></mat-datepicker>
+                </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Finished at</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="pickerFinished" name="finishedAt" formControlName="finishedAt">
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="pickerFinished"></mat-datepicker-toggle>
+                <mat-datepicker #pickerFinished></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <button type="submit" [disabled]="!taskForm.valid" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>
+

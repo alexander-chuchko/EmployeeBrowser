@@ -1,0 +1,62 @@
+<h2>Update user</h2>
+<div class="form-container">
+    <form class="created-project-form" (ngSubmit)="onSubmit()" [formGroup]="userForm">
+        <div class="group">
+            <label>Team id</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Team Id</mat-label>
+                <input matInput name="teamId" placeholder="teamId" formControlName="teamId">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Firstname</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>firstname</mat-label>
+                <input matInput name="firstname" placeholder="firstname" formControlName="firstName">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Lastname</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>lasttname</mat-label>
+                <input matInput name="lastname" placeholder="lastname" formControlName="lastName">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Email</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput name="email" placeholder="email" formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Registered At</label>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="pickerregistered" name="registeredAt" formControlName="registeredAt">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="pickerregistered"></mat-datepicker-toggle>
+                    <mat-datepicker #pickerregistered></mat-datepicker>
+                </mat-form-field>
+        </div>
+        <div class="group">
+            <label>Birthday</label>
+            <br>
+            <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="pickerbirthDay" name="birthDay" formControlName="birthDay">
+                <mat-hint>DD/MM/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="pickerbirthDay"></mat-datepicker-toggle>
+                <mat-datepicker #pickerbirthDay></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="group">
+            <button type="submit" [disabled]="!userForm.valid" mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>

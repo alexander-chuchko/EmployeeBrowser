@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>List projects</h2>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <td class="cell">Id</td>
+                <td class="cell">User Id</td>
+                <td class="cell">Team Id</td>
+                <td class="cell">Name</td>
+                <td class="cell description-cell">Description</td>
+                <td class="cell">Created At</td>
+                <td class="cell">Deadline At</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of projects">
+                <td class="cell">{{p.id}}</td>
+                <td class="cell">{{p?.userId}}</td>
+                <td class="cell">{{p?.teamId}}</td>
+                <td class="cell">{{p?.name}}</td>
+                <td>{{p?.description}}</td>
+                <td class="cell">{{p.createdAt}}</td>
+                <td class="cell">{{p.deadline}}</td>
+                <td class="cell">
+                    <button id="btnUpdate" (click)="updateProject(p)">Update</button>
+                    <button id="btnRemove" (click)="deleteProject(p)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="containerButton">
+        <button id="btnAdd" (click)="addProject()">Add project</button>
+    </div>
+</div>
