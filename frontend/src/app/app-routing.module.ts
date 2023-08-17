@@ -8,6 +8,10 @@ import { TeamsCreateComponent } from './components/teams/teams-create/teams-crea
 import { UsersListComponent } from './components/users/users-list/users-list.component';
 import { TaskCreateComponent } from './components/tasks/task-create/task-create.component';
 import { TaskUpdateComponent } from './components/tasks/task-update/task-update.component';
+import { TeamsListComponent } from './components/teams/teams-list/teams-list.component';
+import { TeamsUpdateComponent } from './components/teams/teams-update/teams-update.component';
+import { UsersCreateComponent } from './components/users/users-create/users-create.component';
+import { UsersUpdateComponent } from './components/users/users-update/users-update.component';
 
 const routes: Routes =[
   { path: 'projects', component: ProjectsListComponent},
@@ -16,8 +20,12 @@ const routes: Routes =[
   { path: 'tasks', component: TaskListComponent},
   { path: 'tasks/create', component: TaskCreateComponent},
   { path: 'tasks/update/:id', component: TaskUpdateComponent},
-  { path: 'users', component: TeamsCreateComponent},
-  { path: 'teams', component: UsersListComponent},
+  { path: 'teams', component: TeamsListComponent},
+  { path: 'teams/create', component: TeamsCreateComponent},
+  { path: 'teams/update/:id', component: TeamsUpdateComponent},
+  { path: 'users', component: UsersListComponent},
+  { path: 'users/create', component: UsersCreateComponent},
+  { path: 'usersupdate/:id', component: UsersUpdateComponent},
   { path: '**', redirectTo: 'projects' }
 ];
 

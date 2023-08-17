@@ -14,9 +14,7 @@ export class ProjectsListComponent implements OnInit {
   project?: Project;
   @Output() idEmmiter?: number;
 
-  constructor(private dataService: DataService, private router: Router) {
-
-  }
+  constructor(private dataService: DataService, private router: Router) { }
 
   loadPojects() {
     this.dataService.getProjects().subscribe(data => {

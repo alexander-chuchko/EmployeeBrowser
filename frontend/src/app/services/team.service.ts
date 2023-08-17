@@ -2,45 +2,44 @@ import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
-import { User } from '../models/user/user';
+import { Team } from '../models/team/team';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class TeamService {
 
   private baseUrl: string = environment.apiUrl;
-  private url = "/api/users";
+  private url = "/api/teams";
 
   constructor(private http: HttpClient) {}
 
-  getTasks() : Observable<User[]> {
+  getTeams() : Observable<Team[]> {
     let concatUrl = `${this.baseUrl}${this.url}`
-      return this.http.get<User[]>(concatUrl).pipe(
+      return this.http.get<Team[]>(concatUrl).pipe(
         catchError(this.handleError)
       );
   }
-
    
-  getTask(id: number): Observable<User> {
-    return this.http.get<User>(`${this.baseUrl}${this.url}/${id}`).pipe(
+  getTeam(id: number): Observable<Team> {
+    return this.http.get<Team>(`${this.baseUrl}${this.url}/${id}`).pipe(
         catchError(this.handleError)
       );
   }
 
-  createTask(user: User): Observable<any> {
-    return this.http.post(`${this.baseUrl}${this.url}`, user).pipe(
+  createTeam(team: Team): Observable<any> {
+    return this.http.post(`${this.baseUrl}${this.url}`, team).pipe(
       catchError(this.handleError)
     );
   }
 
-  updateTask(user: User): Observable<User> {
-    return this.http.put<User>(`${this.baseUrl}${this.url}/${user.id}`, user).pipe(
+  updateTeam(team: Team): Observable<Team> {
+    return this.http.put<Team>(`${this.baseUrl}${this.url}/${team.id}`, team).pipe(
       catchError(this.handleError)
     );
   }
 
-  deleteTask(id: number): Observable<void> {
+  deleteTeam(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}${this.url}/${id}`).pipe(
       catchError(this.handleError)
     );
