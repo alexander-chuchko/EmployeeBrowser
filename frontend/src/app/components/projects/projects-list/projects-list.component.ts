@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Project } from 'src/app/models/project/project';
-import { DataService } from 'src/app/services/dataservice.service';
+import { ProjectService } from 'src/app/services/projectservice.service';
 
 @Component({
   selector: 'app-projects-list',
@@ -14,7 +14,7 @@ export class ProjectsListComponent implements OnInit {
   project?: Project;
   @Output() idEmmiter?: number;
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: ProjectService, private router: Router) { }
 
   loadPojects() {
     this.dataService.getProjects().subscribe(data => {

@@ -11,7 +11,6 @@ import { TasksService } from 'src/app/services/taskservice.service';
 export class TaskListComponent {
   tasks?: Task[];
   task?: Task;
-  color='red';
 
   states: any[] = [
     { value: 0, viewValue: 'To Do' },
@@ -20,8 +19,6 @@ export class TaskListComponent {
     { value: 3, viewValue: 'Canceled' },
   ];
 
-  //color ='red';
-
   statesColor: any[] = [
     { value: 0, viewValue: 'gray' },
     { value: 1, viewValue: 'blue' },
@@ -29,19 +26,18 @@ export class TaskListComponent {
     { value: 3, viewValue: 'red' },
   ];
 
-  
+
   constructor(private taskService: TasksService, private router: Router) {
   }
 
   getStateColor(stateValue: number): string {
     const colorEntry = this.statesColor.find(entry => entry.value === stateValue);
     return colorEntry ? colorEntry.viewValue : '';
-}
+  }
 
   getStateViewValue(stateValue: number): string {
     const state = this.states.find(s => s.value === stateValue);
-    //this.color = this.getStateColor(stateValue);
-    return state ? state.viewValue : ''; 
+    return state ? state.viewValue : '';
   }
 
   loadTasks() {
@@ -52,7 +48,7 @@ export class TaskListComponent {
 
   updateTask(t: Task) {
     this.task = t;
-    if(t) {
+    if (t) {
       this.router.navigate(['/tasks/update', t.id]
       );
     }
