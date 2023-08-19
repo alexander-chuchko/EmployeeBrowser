@@ -3,7 +3,7 @@ import { AbstractControl, FormControl, FormGroup, ValidationErrors, Validators }
 import { Router } from '@angular/router';
 import * as moment from 'moment';
 import { Project } from 'src/app/models/project/project';
-import { DataService } from 'src/app/services/dataservice.service';
+import { ProjectService } from 'src/app/services/projectservice.service';
 
 @Component({
   selector: 'app-project-create',
@@ -16,7 +16,7 @@ export class ProjectCreateComponent implements OnInit {
 
   projectForm!: FormGroup;
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(private dataService: ProjectService, private router: Router) { }
 
   onSubmit() {  
     if (this.projectForm.valid) {

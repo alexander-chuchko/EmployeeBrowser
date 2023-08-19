@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { Observable, of } from 'rxjs';
 import { Project } from 'src/app/models/project/project';
-import { DataService } from 'src/app/services/dataservice.service';
+import { ProjectService } from 'src/app/services/projectservice.service';
 
 @Component({
   selector: 'app-project-update',
@@ -19,7 +19,7 @@ export class ProjectUpdateComponent implements OnInit {
   id!: number;
   isSaved = false;
 
-  constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private dataService: ProjectService, private router: Router, private route: ActivatedRoute) { }
 
   canDeactivate(): Observable<boolean> {
     if (this.projectForm.dirty && !this.isSaved) {

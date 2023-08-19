@@ -7,7 +7,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class ProjectService {
 
   private baseUrl: string = environment.apiUrl;
   private url = "/api/projects";
